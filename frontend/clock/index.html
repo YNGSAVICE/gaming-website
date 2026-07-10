@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - TimeZone Viewer</title>
+    <link rel="stylesheet" href="css/clock.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock-header">
+            <h1>🕐 Global Time Zone Clock</h1>
+            <div class="controls">
+                <label>
+                    <input type="checkbox" id="format24h"> 24-Hour Format
+                </label>
+                <button class="btn btn-secondary" onclick="addTimezone()">+ Add Timezone</button>
+            </div>
+        </div>
+
+        <div class="clock-grid" id="clock-grid">
+            <!-- Clocks will be loaded here -->
+        </div>
+
+        <!-- Add Timezone Modal -->
+        <div id="timezone-modal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeTimezoneModal()">&times;</span>
+                <h2>Add Timezone</h2>
+                <input type="text" id="timezone-search" placeholder="Search timezone..." onkeyup="searchTimezones()">
+                <div id="timezone-list" class="timezone-list">
+                    <!-- Timezones will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/clock.js"></script>
+</body>
+</html>
