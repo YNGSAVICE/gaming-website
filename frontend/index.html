@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">🎮 GameHub</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                    <li><a href="#profile" class="profile-link" style="display:none;">Profile</a></li>
+                    <li><a href="#login" class="login-link">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home" class="section">
+                <div class="hero">
+                    <h1>Welcome to GameHub</h1>
+                    <p>Play games, compete with friends, and climb the leaderboards</p>
+                    <button class="btn btn-primary" onclick="scrollToSection('games')">Start Playing</button>
+                </div>
+            </section>
+
+            <!-- Games Section -->
+            <section id="games" class="section">
+                <div class="container">
+                    <h2>Available Games</h2>
+                    <div id="games-list" class="games-grid">
+                        <!-- Games will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard Section -->
+            <section id="leaderboard" class="section">
+                <div class="container">
+                    <h2>Leaderboard</h2>
+                    <div id="leaderboard-list" class="leaderboard-table">
+                        <!-- Leaderboard will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Login Modal -->
+            <div id="login-modal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Login</h2>
+                    <form id="login-form" onsubmit="handleLogin(event)">
+                        <input type="text" placeholder="Username" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <p>Don't have an account? <a href="#" onclick="toggleAuthMode()">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
