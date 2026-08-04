@@ -5,16 +5,22 @@
     <title>WebX (Electron)</title>
     <style>
       body, html { height: 100%; margin: 0; }
-      #controls { padding: 8px; background: #eee; }
-      #webview { width: 100%; height: calc(100% - 48px); border: none; }
+      #controls { padding: 8px; background: #eee; display:flex; gap:8px; align-items:center }
+      #tabs { padding: 8px; background: #ddd; display:flex; gap:4px; }
+      .webview { width: 100%; height: calc(100% - 96px); border: none; }
+      button.active { background: #bbb; }
     </style>
   </head>
   <body>
     <div id="controls">
-      <input id="address" style="width:70%" placeholder="https://example.com" />
+      <div id="tabs"></div>
+      <input id="address" style="flex:1" placeholder="https://example.com" />
       <button id="go">Go</button>
+      <button id="newtab">＋ Tab</button>
+      <button id="bookmark">☆</button>
+      <button id="showBookmarks">Bookmarks</button>
     </div>
-    <iframe id="webview" src="https://www.bing.com"></iframe>
+
     <script src="renderer.js"></script>
   </body>
 </html>

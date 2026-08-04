@@ -8,9 +8,14 @@
             <Button Name="BackButton" Click="BackButton_Click">◀</Button>
             <Button Name="ForwardButton" Click="ForwardButton_Click">▶</Button>
             <Button Name="ReloadButton" Click="ReloadButton_Click">⟳</Button>
-            <TextBox Name="AddressBar" Width="600" KeyDown="AddressBar_KeyDown" />
+            <Button Name="NewTabButton" Click="NewTabButton_Click">＋ Tab</Button>
+            <Button Name="CloseTabButton" Click="CloseTabButton_Click">✕ Tab</Button>
+            <TextBox Name="AddressBar" Width="450" KeyDown="AddressBar_KeyDown" />
             <Button Name="GoButton" Click="GoButton_Click">Go</Button>
+            <Button Name="BookmarkButton" Click="BookmarkButton_Click">☆</Button>
+            <Button Name="ShowBookmarksButton" Click="ShowBookmarksButton_Click">Bookmarks</Button>
         </ToolBar>
-        <wv2:WebView2 Name="WebView" />
+
+        <TabControl Name="TabControl" />
     </DockPanel>
 </Window>
