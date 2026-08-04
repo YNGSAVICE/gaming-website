@@ -1,0 +1,21 @@
+<Window x:Class="WebX.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="WebX" Height="720" Width="1024">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Name="BackButton" Click="BackButton_Click">◀</Button>
+            <Button Name="ForwardButton" Click="ForwardButton_Click">▶</Button>
+            <Button Name="ReloadButton" Click="ReloadButton_Click">⟳</Button>
+            <Button Name="NewTabButton" Click="NewTabButton_Click">＋ Tab</Button>
+            <Button Name="CloseTabButton" Click="CloseTabButton_Click">✕ Tab</Button>
+            <TextBox Name="AddressBar" Width="450" KeyDown="AddressBar_KeyDown" />
+            <Button Name="GoButton" Click="GoButton_Click">Go</Button>
+            <Button Name="BookmarkButton" Click="BookmarkButton_Click">☆</Button>
+            <Button Name="ShowBookmarksButton" Click="ShowBookmarksButton_Click">Bookmarks</Button>
+        </ToolBar>
+
+        <TabControl Name="TabControl" />
+    </DockPanel>
+</Window>
