@@ -1,0 +1,13 @@
+{
+  "name": "webx-electron",
+  "version": "0.1.0",
+  "description": "WebX Electron starter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . WebX --platform=win32 --arch=x64"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0"
+  }
+}
